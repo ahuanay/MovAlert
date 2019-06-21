@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "I";
+}
+
+@Html.Hidden("Get", Url.Action("Get", "Monitoreos"))
+
+<section class="au-breadcrumb m-t-75">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="au-breadcrumb-content">
+                        <div class="au-breadcrumb-left">
+                            <h2>Lista Alertas</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-5">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive table--no-card m-b-30">
+                        <table class="table table-borderless table-striped table-earning">
+                            <thead class="text-center">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Equipo</th>
+                                    <th>Incidencia</th>
+                                    <th>Requisitoriado</th>
+                                    <th>Fecha Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tblInfo"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section scripts {
+
+    <script type="text/javascript">
+        $(function () {
+             setInterval(getData(), 3000);
+        });
+
+        function getData() {
+            var $tbl = $('#tblInfo');
+            $.ajax({
+                url: $("#Get").val(),
+                type: 'GET',
+                datatype: 'json',
+                success: function (data) {
+                    $tbl.empty();
+
+                    $.each(data.ListMonInc, function (i, model) {
+                        $tbl.append
+                            (
+                                '<tr>' +
+                                '<td class="text-center">' + model.IdMonitoreoIncidencia + '</td>' +
+                                '<td class="text-center">' + model.Equipo + '</td>' +
+                                '<td class="text-center">' + model.Incidencia + '</td>' +
+                                '<td class="text-center">' + model.Requisitoriado + '</td>' +
+                                '<td class="text-center">' + model.FechaHora + '</td>' +
+                                '<tr>'
+                            );
+                    });
+                }
+            });
+        }
+
+    </script>
+
+}

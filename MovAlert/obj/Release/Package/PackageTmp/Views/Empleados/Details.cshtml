@@ -1,0 +1,90 @@
+﻿@model MovAlert.Models.Empleados
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<section class="au-breadcrumb m-t-75">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="au-breadcrumb-content">
+                        <div class="au-breadcrumb-left">
+                            <h2>Detalles Empleado</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-5">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.IdEmpleado)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.IdEmpleado)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Apellido)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Apellido)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Nombre)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Telefono)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Telefono)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Email)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Avatar)
+                                </dt>
+
+                                <dd>
+                                    <img width="50" height="50" src="@Url.Action("convertirImagen", "Empleados", new {IdEmpleado = Model.IdEmpleado})" />
+                                </dd>
+
+                            </dl>
+                            <p>
+                                @Html.ActionLink("Editar", "Edit", new { id = Model.IdEmpleado }) |
+                                @Html.ActionLink("Volver a la lista", "Index")
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

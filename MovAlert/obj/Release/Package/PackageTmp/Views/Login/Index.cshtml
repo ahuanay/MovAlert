@@ -1,0 +1,100 @@
+﻿@model MovAlert.Models.Empleados
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/Theme/CollAdmin/css/font-face.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" />
+
+    <link href="~/Theme/CollAdmin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/Theme/CollAdmin/vendor/animsition/animsition.min.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/wow/animate.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/slick/slick.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/select2/select2.min.css" rel="stylesheet" />
+    <link href="~/Theme/CollAdmin/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" />
+
+    <link href="~/Theme/CollAdmin/css/theme.css" rel="stylesheet" />
+
+    <title>Login | MovAlert</title>
+
+</head>
+<body class="animsition">
+    <div class="page-wrapper">
+        <div class="page-content--bge5">
+            <div class="container">
+                <div class="login-wrap">
+                    <div class="login-content">
+                        <div class="login-logo">
+                            <a href="#">
+                                <img src="images/icon/logo.png" alt="Mov Alert">
+                            </a>
+                        </div>
+                        <div class="login-form">
+                            @using (Html.BeginForm("Autherize", "Login", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.UserName)
+                                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "au-input au-input--full" } })
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.UserPass)
+                                    @Html.EditorFor(model => model.UserPass, new { htmlAttributes = new { @class = "au-input au-input--full" } })
+                                </div>
+                                <div class="login-checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember">Recordarme
+                                    </label>
+                                    <label>
+                                        <a href="#">¿Contraseña olvidada?</a>
+                                    </label>
+                                </div>
+                                <input type="submit" value="Iniciar Sesión" class="au-btn au-btn--block au-btn--green m-b-20" />
+                            }
+                            <div class="register-link">
+                                <p>
+                                    ¿No tienes cuenta?
+                                    <a href="@Url.Action("Crear", "Empleados")">Registrate aquí</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/Theme/CollAdmin/vendor/jquery-3.2.1.min.js"></script>
+
+    <script src="~/Theme/CollAdmin/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+
+    <script src="~/Theme/CollAdmin/vendor/slick/slick.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/wow/wow.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/animsition/animsition.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/counter-up/jquery.counterup.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="~/Theme/CollAdmin/vendor/select2/select2.min.js"></script>
+
+    <script src="~/Theme/CollAdmin/js/main.js"></script>
+
+</body>
+</html>
