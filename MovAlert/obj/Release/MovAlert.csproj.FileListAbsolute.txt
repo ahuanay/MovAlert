@@ -82,3 +82,4 @@ D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Release\MovAlert
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Release\MovAlert.csproj.CopyComplete
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Release\MovAlert.dll
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Release\MovAlert.pdb
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\LibFace.dll

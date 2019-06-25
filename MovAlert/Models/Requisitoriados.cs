@@ -20,7 +20,7 @@ namespace MovAlert.Models
 
         [Required]
         [StringLength(250)]
-        public string IdFace { get; set; }
+        public string UrlImg { get; set; }
 
         public bool Estado { get; set; }
 

@@ -164,3 +164,4 @@ D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Debug\MovAlert.c
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Debug\MovAlert.dll
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Debug\MovAlert.pdb
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Debug\MovAlert.csprojAssemblyReference.cache
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\LibFace.dll

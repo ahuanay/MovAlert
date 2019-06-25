@@ -1,0 +1,34 @@
+﻿@model MovAlert.Models.Requisitoriados
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Requisitoriados</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdFace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdFace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdRequisitoriado }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
