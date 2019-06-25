@@ -46,8 +46,19 @@ namespace MovAlert.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdRequisitoriado,IdFace,Estado")] Requisitoriados requisitoriados)
+        public ActionResult Create([Bind(Include = "IdRequisitoriado,Estado")] Requisitoriados requisitoriados, HttpPostedFileBase Imagen)
         {
+            if (Imagen != null && Imagen.ContentLength > 0)
+            {
+                string archivo = Imagen.FileName;
+                string urlBase = "/Img/";
+                string url = urlBase + archivo;
+
+                Imagen.SaveAs(Server.MapPath(url));
+
+                requisitoriados.UrlImg = url;
+            }
+
             if (ModelState.IsValid)
             {
                 db.Requisitoriados.Add(requisitoriados);
@@ -78,7 +89,7 @@ namespace MovAlert.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdRequisitoriado,IdFace,Estado")] Requisitoriados requisitoriados)
+        public ActionResult Edit([Bind(Include = "IdRequisitoriado,UrlImg,Estado")] Requisitoriados requisitoriados)
         {
             if (ModelState.IsValid)
             {
