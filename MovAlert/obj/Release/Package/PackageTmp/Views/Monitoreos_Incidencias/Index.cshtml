@@ -2,8 +2,6 @@
     ViewBag.Title = "I";
 }
 
-@Html.Hidden("Get", Url.Action("Get", "Monitoreos"))
-
 <section class="au-breadcrumb m-t-75">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
@@ -32,7 +30,6 @@
                                     <th>#</th>
                                     <th>Equipo</th>
                                     <th>Incidencia</th>
-                                    <th>Requisitoriado</th>
                                     <th>Fecha Hora</th>
                                 </tr>
                             </thead>
@@ -50,14 +47,14 @@
 
     <script type="text/javascript">
         $(function () {
-             setInterval(getData(), 3000);
+             setInterval("getData()", 5000);
         });
 
         function getData() {
             var $tbl = $('#tblInfo');
             $.ajax({
-                url: $("#Get").val(),
-                type: 'GET',
+                url: "@Url.Action("Post", "Monitoreos_Incidencias")",
+                type: 'POST',
                 datatype: 'json',
                 success: function (data) {
                     $tbl.empty();
@@ -69,7 +66,6 @@
                                 '<td class="text-center">' + model.IdMonitoreoIncidencia + '</td>' +
                                 '<td class="text-center">' + model.Equipo + '</td>' +
                                 '<td class="text-center">' + model.Incidencia + '</td>' +
-                                '<td class="text-center">' + model.Requisitoriado + '</td>' +
                                 '<td class="text-center">' + model.FechaHora + '</td>' +
                                 '<tr>'
                             );

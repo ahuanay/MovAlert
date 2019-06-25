@@ -74,7 +74,7 @@ namespace MovAlert.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdRequisitoriado,UrlImg,Estado")] Requisitoriados requisitoriados)
+        public ActionResult Edit([Bind(Include = "IdRequisitoriado,Estado")] Requisitoriados requisitoriados)
         {
             if (ModelState.IsValid)
             {

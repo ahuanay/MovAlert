@@ -109,7 +109,6 @@
     <Content Include="Img\1111.png" />
     <Content Include="Img\1112.png" />
     <Content Include="Img\1113.png" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Theme\CollAdmin\css\font-face.css" />
     <Content Include="Theme\CollAdmin\css\theme.css" />
     <Content Include="Theme\CollAdmin\fonts\poppins\poppins-v5-latin-100.svg" />

@@ -3,8 +3,6 @@
     ViewBag.Title = "Monitoreos";
 }
 
-@Html.Hidden("Get", Url.Action("Get", "Monitoreos"))
-
 <section class="au-breadcrumb m-t-75">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
@@ -49,18 +47,14 @@
 @section scripts {
     <script type="text/javascript">
         $(function () {
-            setInterval(getData(), 5000);
-            //var i = 1;
-            //do {
-            //    getData();
-            //} while (i == 1);
+            setInterval("getData()", 5000);
         });
 
         function getData() {
             var $tbl = $('#tblInfo');
             $.ajax({
-                url: $("#Get").val(),
-                type: 'GET',
+                url : "@Url.Action("Post", "Monitoreos")",
+                type: 'POST',
                 datatype: 'json',
                 success: function (data) {
                     $tbl.empty();

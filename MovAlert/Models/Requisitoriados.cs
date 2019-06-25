@@ -18,7 +18,7 @@ namespace MovAlert.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdRequisitoriado { get; set; }
 
-        [StringLength(250), Display(Name = "Url de la Imagen")]
+        [StringLength(250), Display(Name = "Imagen")]
         public string UrlImg { get; set; }
 
         [Display(Name = "Activo")]

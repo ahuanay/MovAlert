@@ -39,6 +39,9 @@
                                     <th>
                                         @Html.DisplayNameFor(model => model.Estado)
                                     </th>
+                                    <th>
+                                        Ver
+                                    </th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -54,6 +57,9 @@
                                         </td>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.Estado)
+                                        </td>
+                                        <td>
+                                            <a href="https://www.recompensas.pe/profugo/@Html.DisplayFor(modelItem => item.IdRequisitoriado)" target="_blank">Ver</a>
                                         </td>
                                         <td>
                                             @Html.ActionLink("Editar", "Edit", new { id = item.IdRequisitoriado }, new { @class = "btn btn-secondary" })

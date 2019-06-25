@@ -17,7 +17,7 @@ namespace MovAlert.Controllers
             return View();
         }
 
-        public JsonResult Get()
+        public JsonResult Post()
         {
 
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MovAlertBDModel"].ConnectionString))

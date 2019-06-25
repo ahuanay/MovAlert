@@ -17,13 +17,13 @@ namespace MovAlert.Controllers
             return View();
         }
 
-        public JsonResult Get()
+        public JsonResult Post()
         {
 
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MovAlertBDModel"].ConnectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand(@"SELECT IdMonitoreoIncidencia, IdEquipo, Incidencia, CONCAT(Apellidos, ' ', Nombres) AS Nombre, FechaHora FROM Monitoreos_Incidencias MI INNER JOIN Monitoreos M ON MI.IdMonitoreo = M.IdMonitoreo INNER JOIN Incidencias I ON MI.IdIncidencia = I.IdIncidencia INNER JOIN Requisitoriados R ON MI.IdRequisitoriado = R.IdRequisitoriado", connection))
+                using (SqlCommand command = new SqlCommand(@"SELECT IdMonitoreoIncidencia, IdEquipo, Incidencia, FechaHora FROM Monitoreos_Incidencias MI INNER JOIN Monitoreos M ON MI.IdMonitoreo = M.IdMonitoreo INNER JOIN Incidencias I ON MI.IdIncidencia = I.IdIncidencia", connection))
                 {
 
                     if (connection.State == ConnectionState.Closed)
@@ -37,7 +37,6 @@ namespace MovAlert.Controllers
                                 IdMonitoreoIncidencia = (int)x["IdMonitoreoIncidencia"],
                                 Equipo = (string)x["IdEquipo"],
                                 Incidencia = (string)x["Incidencia"],
-                                Requisitoriado = (string)x["Nombre"],
                                 FechaHora = (DateTime)x["FechaHora"]
                             }).ToList();
 
