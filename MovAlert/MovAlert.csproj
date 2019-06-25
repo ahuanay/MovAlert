@@ -371,7 +371,6 @@
     <Content Include="Views\Empleados\Crear.cshtml" />
     <Content Include="Views\Requisitoriados\Create.cshtml" />
     <Content Include="Views\Requisitoriados\Delete.cshtml" />
-    <Content Include="Views\Requisitoriados\Details.cshtml" />
     <Content Include="Views\Requisitoriados\Edit.cshtml" />
     <Content Include="Views\Requisitoriados\Index.cshtml" />
     <None Include="Web.Debug.config">

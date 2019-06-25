@@ -20,21 +20,6 @@ namespace MovAlert.Controllers
             return View(db.Requisitoriados.ToList());
         }
 
-        // GET: Requisitoriados/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Requisitoriados requisitoriados = db.Requisitoriados.Find(id);
-            if (requisitoriados == null)
-            {
-                return HttpNotFound();
-            }
-            return View(requisitoriados);
-        }
-
         // GET: Requisitoriados/Create
         public ActionResult Create()
         {

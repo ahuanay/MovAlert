@@ -1,39 +1,71 @@
 ﻿@model IEnumerable<MovAlert.Models.Requisitoriados>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Requisitoriados";
 }
 
-<h2>Index</h2>
+<section class="au-breadcrumb m-t-75">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="au-breadcrumb-content">
+                        <div class="au-breadcrumb-left">
+                            <h2>Lista Empleados</h2>
+                        </div>
+                        <a href="@Url.Action("Create", "Requisitoriados")" class="btn btn-primary"><i class="fas fa-user"></i><span class="bot-line"></span> Nuevo Requisitoriado</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.UrlImg)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Estado)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UrlImg)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estado)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdRequisitoriado }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdRequisitoriado }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdRequisitoriado })
-        </td>
-    </tr>
-}
-
-</table>
+<section class="mt-5">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive table--no-card m-b-30">
+                        <table class="table table-borderless table-striped table-earning">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.IdRequisitoriado)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.UrlImg)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Estado)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.IdRequisitoriado)
+                                        </td>
+                                        <td>
+                                            <img src="@Html.DisplayFor(modelItem => item.UrlImg)" width="30"/>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Estado)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.IdRequisitoriado }, new { @class = "btn btn-secondary" })
+                                            @Html.ActionLink("Eliminar", "Delete", new { id = item.IdRequisitoriado }, new { @class = "btn btn-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
