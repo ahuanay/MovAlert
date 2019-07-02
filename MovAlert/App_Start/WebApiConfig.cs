@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace MovAlertApi
+namespace MovAlert
 {
     public static class WebApiConfig
     {
@@ -16,7 +16,6 @@ namespace MovAlertApi
 
             //Elimino que el sistema devuelva en XML, sólo trabajaremos con JSON
             config.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
-
             // Rutas de API web
             config.MapHttpAttributeRoutes();
 

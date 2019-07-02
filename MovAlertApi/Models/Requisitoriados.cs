@@ -19,8 +19,8 @@ namespace MovAlertApi.Models
         public int IdRequisitoriado { get; set; }
 
         [Required]
-        [StringLength(25)]
-        public string IdFace { get; set; }
+        [StringLength(250)]
+        public string UrlImg { get; set; }
 
         public bool Estado { get; set; }
 
