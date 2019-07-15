@@ -83,3 +83,12 @@ D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Release\MovAlert
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Release\MovAlert.dll
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\obj\Release\MovAlert.pdb
 D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\LibFace.dll
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\System.Net.Http.Formatting.dll
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\System.Web.Http.dll
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\System.Web.Http.WebHost.dll
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\System.Net.Http.Formatting.xml
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\System.Web.Http.xml
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\System.Web.Http.WebHost.xml
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\es\System.Net.Http.Formatting.resources.dll
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\es\System.Web.Http.resources.dll
+D:\Documentos\Proyectos\Web\Visual Studio\MovAlert\MovAlert\bin\es\System.Web.Http.WebHost.resources.dll
